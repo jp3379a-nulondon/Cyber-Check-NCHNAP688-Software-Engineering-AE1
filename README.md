@@ -278,6 +278,10 @@ Project dependencies are installed as part of the workflow. Python dependencies 
 
 The GitHub repository is configured to run automated tests using GitHub Actions. When code is changed locally and then pushed or uploaded to the repository, the test suite will run automatically, provided the required CI/CD files remain in place. This includes the workflow `.yml` file within `.github/workflows/`, the relevant test scripts, and dependency files such as `requirements.txt` for Python and `package.json` for JavaScript.
 
+![GitHub Actions running tests](https://github.com/user-attachments/assets/3d1c6ae2-5c51-474c-b1b0-52693aa66f34)
+
+***Figure 13** - GitHub Actions running tests and showing all passed.*
+
 Tests can also be run on a local machine. To do this, the project files should be downloaded or cloned from the GitHub repository, keeping the same folder structure. The required dependencies must then be installed locally. Python testing requires `pytest`, while JavaScript testing requires `jest`.
 
 To run the Python tests locally, use the following terminal command:
@@ -294,7 +298,7 @@ npm test
 
 ![Picture of python test passing](https://github.com/user-attachments/assets/19d80c95-e870-4779-8c98-e147b94a1c1c)
 
-***Figure 13** - Local Python test running and passing all four tests in VS code terminal.*
+***Figure 14** - Local Python test running and passing all four tests in VS code terminal.*
 
 [How to install pytest](https://docs.pytest.org/en/stable/getting-started.html)
 
@@ -306,14 +310,14 @@ Accessibility testing was conducted on the finished web application using Google
 
 ![Picture of accessibility check](https://github.com/user-attachments/assets/0b208d48-223f-4f63-a00e-e0c79c66bf52)
 
-***Figure 14** - Accessibility test using Google Lighthouse on the IP input page.*
+***Figure 15** - Accessibility test using Google Lighthouse on the IP input page.*
 
 Issues #44 was created to solve this problem. This was solved by adding ``` role="main" ``` into the html body tag <body role="main">. This allows easier identification of the primary content area of a web page for assistive technologies like screen readers.
 
 
 ![Picture of accessibility check passing](https://github.com/user-attachments/assets/be295ce7-8291-43e5-a343-feeeae6fdd5c)
 
-***Figure 15** - Accessibility test using Google Lighthouse on the IP input page scoring 100.*
+***Figure 16** - Accessibility test using Google Lighthouse on the IP input page scoring 100.*
 
 [Click here for the full Google Lighthouse Report](https://github.com/user-attachments/files/29571876/Google.Lighthouse.Report.pdf)
 
@@ -325,7 +329,7 @@ A small group of six security analysts were asked to test the MVP and answer a q
 
 ![User overall score](https://github.com/user-attachments/assets/5ac03290-73aa-41d5-9a5e-7d576dd3b2d8)
 
-***Figure 16** - User testing overall score.*
+***Figure 17** - User testing overall score.*
 
 [Click here to see a blank copy of the questionnaire](https://github.com/user-attachments/files/29571962/Blank.Feedback.Survey.pdf)
 
@@ -336,6 +340,43 @@ A small group of six security analysts were asked to test the MVP and answer a q
 Currently the application is based on [Render.com](https://render.com/), this is a free to use service. The link in the about section of the GitHub main page for this application has the link that render uses. 
 This link is also embedded in the index.js file. If the server needs to be changed this file is the only file that would have to be edited. 
 Render is a simple free live server platform - [read more here](https://render.com/docs).
+
+![Deployment on Render](https://github.com/user-attachments/assets/5be3b956-cf64-404f-9fff-856d3813324e)
+
+***Figure 18** - Successful deployment of web application on Render.*
+
+</details>
+
+
+
+<details>
+
+<summary><h2>User Documentation</h2></summary>
+
+### Features
+
+This application allows users to check the reputation of an IP address using open source intelligence from the Virus Total database and ascertain whether an IP address has previously been associated with suspicious or malicious activity.
+
+
+### How to use the App
+
+
+| Step | Action |
+|---|---|
+| 1 | Open the application using the website URL. |
+| 2 | On the homepage, click the **Enter** button. |
+| 3 | Read the instructions displayed on the page. |
+| 4 | Enter an IP address of your choice into the input field. |
+| 5 | Submit the IP address by clicking the **Submit** button. |
+| 6 | The application will check the IP address against the Virus Total database. |
+| 7 | The results will then be displayed on the page. |
+| 8 | To return to the homepage, click the image in the top left corner of the page. |
+
+***Table 8** - Step by step action for users to follow.*
+
+
+If an error occurs, the application will show an informative message explaining the issue. If the error relates to the server or API key, contact IT support.
+
 
 </details>
 
